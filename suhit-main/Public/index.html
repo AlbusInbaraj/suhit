@@ -26,6 +26,8 @@
     <link rel="apple-touch-icon" sizes="114x114" href="assets/images/image/Suhit Associates 114.png">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+    <script src="assets/js/Subscription.js"></script> 
+
     <!-- Custom Font
     ================================================== -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Exo:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7cRoboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
@@ -1358,7 +1360,7 @@
                 <!-- block-title-area -->
                 <div class="col-md-9 block-title-area tb-cell">
                     <div class="heading-content style-one border">
-                        <h3 class="subtitle">Some Biggest</h3>
+                        <!-- <h3 class="subtitle">Some Biggest</h3> -->
                         <h2 class="title">Company with us</h2>
                     </div><!-- /.heading-content-one -->
                 </div><!-- /.col-md-9 -->
@@ -1664,23 +1666,26 @@
                             <ul>
                                 <li><a href="mailto:suhitassociates@gmail.com"><i class="fa fa-envelope"></i>suhitassociates@gmail.com</a></li>
                                 <li><a href="tel:+91 98436 77371"><i class="fa fa-phone"></i>+91 98436 77371</a></li>
-                                <li><a href="https://goo.gl/maps/oc2gz7rzmYYYKjs89"><i class="fa fa-map-marker"></i>5G/1, Palayamkottai Road,<br> Opp. to Tuticorin Spinning Mill,<br> Millerpuram,Thoothukudi-628008.</a></li>
+                                <li><a href="https://goo.gl/maps/oc2gz7rzmYYYKjs89"><i class="fa fa-map-marker"></i>5G/1, Palayamkottai Road,<br> Opp. to Tuticorin Spinning Mill,<br> Millerpuram,<br> Thoothukudi-628008.</a></li>
                             </ul> 
                         </div><!-- /.widget -->
-                        <div class="widget widget_newsletter">
+                        <div class="widget widget_newsletter" style="display: none;">
                             <h3 class="widget-title">Subscribe</h3>
-                            <form action=" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf4YQcrcIQ3niZpqdoyU5JTaLlX7W_dy2gThhMTWycCR-IvLg/formResponse" class="subscribes-newsletter" method="get">
+                            <!-- <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted)  { alert('Thanks for Subscribe.'); window.location='https://suhitassociates.com/';}"></iframe> 
+                    <form class="form-class"  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf4YQcrcIQ3niZpqdoyU5JTaLlX7W_dy2gThhMTWycCR-IvLg/formResponse" target="hidden_iframe" method="POST" id="mG61Hd" onsubmit="return validateForm();" > -->
+                        <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted)  { alert('Thanks for Subscribe.'); window.location='https://suhitassociates.com/';}"></iframe>
+                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf4YQcrcIQ3niZpqdoyU5JTaLlX7W_dy2gThhMTWycCR-IvLg/formResponse" class="subscribes-newsletter" method="get" id="mG61Hd" target="hidden_iframe" onsubmit="return validateForm();">
                                 <label>Subscribe to our Newsletters</label>
                                 <div class="input-group">
-                                    <input type="search" name="entry.1308596548" placeholder="Your email" class="form-controller">
+                                    <input type="text" class="form-control" placeholder="Your Email" required email="entry.1308596548" id="email"> 
                                     <span class="input-group-btn">
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="submit" value="Submit" class="btn btn-primary">
                                                 <span class="fa fa-paper-plane"></span>
                                         </button>
                                     </span>
                                 </div><!-- /. input-group -->
                             </form><!-- /.subscribes-newsletter -->
-                        </div><!-- /.widget -->
+                        </div>/.widget
                     </div><!-- /.col-md-3 -->
 
                     <div class="col-md-4 col-sm-6">
@@ -1773,7 +1778,7 @@
     </footer><!-- /.footer-block -->
        
     <!-- All The JS Files
-    ================================================== --> 
+    ================================================== -->
     <script src="assets/js/plugins.min.js"></script>
     <script src="assets/js/carrent.min.js"></script> <!-- main-js -->
 
@@ -2015,5 +2020,8 @@
     color: #e3051a;
     margin-top: -4% !important;
 }
+}
+iframe{
+    display: none !important;
 }
 </style>
